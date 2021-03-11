@@ -1,0 +1,19 @@
+DirectoryIndex index.php
+RewriteEngine On
+# Some hosts may require you to use the `RewriteBase` directive.
+# If you need to use the `RewriteBase` directive, it should be the
+# absolute physical path to the directory that contains this htaccess file.
+#
+
+#Enable the 3 lines below for redirect to https
+#RewriteCond %{HTTPS} !=on
+#RewriteCond %{REQUEST_URI} !^/.well-known/.*$ [NC]
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+#Add ability to get the authorization headers on the webserver
+SetEnvIf Authorization .+ HTTP_AUTHORIZATION=$0

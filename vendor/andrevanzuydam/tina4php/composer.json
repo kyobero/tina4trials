@@ -1,0 +1,47 @@
+{
+  "name": "andrevanzuydam/tina4php",
+  "description": "Tina4 PHP",
+  "license": "MIT",
+  "require": {
+    "twig/twig": "^1.3",
+    "phpfastcache/phpfastcache": "^7.0",
+    "coyl/git": "^0.1.7",
+    "ext-json": "*",
+    "nowakowskir/php-jwt": "^1.1",
+    "nlp-tools/nlp-tools": "^0.1.3",
+    "opis/closure": "^3.6",
+    "scssphp/scssphp": "^1.4",
+    "twig/extensions": "^1.5",
+    "ext-curl": "*"
+  },
+  "bin": ["bin/tina4","bin/tina4service"],
+  "scripts": {
+    "tina4": "tina4",
+    "tina4service": "tina4service",
+    "test" : "@tina4 tests:run",
+    "initialize": "@tina4 initialize:run",
+    "start" : "php -S localhost:7145 index.php",
+    "start-service": "@tina4service"
+  },
+  "autoload": {
+    "classmap": [
+      "Tina4Php.php",
+      "Tina4",
+      "Tina4/Api",
+      "Tina4/Core",
+      "Tina4/Database",
+      "Tina4/Messaging",
+      "Tina4/ORM",
+      "Tina4/Routing",
+      "Tina4/Security"
+    ],
+    "files": [
+      "Tina4/Tina4Functions.php",
+      "Tina4/Tina4Constants.php",
+      "Tina4/Core/HTMLElement.php"
+    ],
+    "psr-4": {
+      "Tina4\\": ["Tina4/","Tina4/Api","Tina4/Core","Tina4/Database","Tina4/Messaging","Tina4/ORM","Tina4/Routing","Tina4/Security"]
+    }
+  }
+}

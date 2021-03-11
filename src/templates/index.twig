@@ -20,7 +20,45 @@
 
     {% block content %}
 
-        <h1>Welcome to tina4</h1>
+        <h1 align="center">Welcome to tina4</h1><br><br>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Registration form</div>
+                    <div class="card-body">
+
+                        <form action="" method ="post">
+
+                            <div class="form-group">
+                                <label for="Fname">First name:</label>
+                                <input type="text" class="form-control" id="Fname" name="Fname">
+                            </div>
+                            <div class="form-group">
+                                <label for="Lname">Last name:</label>
+                                <input type="text" class="form-control" id="Lname" name="Lname">
+                            </div>
+                            <div class="form-group">
+                                <label for="ID_Number">ID Number:</label>
+                                <input type="text" class="form-control" id="ID_Number" name="ID_Number">
+                            </div>
+                            <div class="form-group">
+                                <label for="Date_of_Birth">Date of Birth:</label>
+                                <input type="Date" class="form-control" placeholder="select date/time" id="Date_of_Birth" name="Date_of_Birth">
+                            </div>
+                            <div class="card-body">
+
+                                <p align="right"><button class="btn btn-primary">cancel</button>
+                                <p align="left"><button class="btn btn-primary">Save</button>
+
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
 
 
     {% endblock %}
